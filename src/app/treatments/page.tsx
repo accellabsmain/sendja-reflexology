@@ -1,21 +1,19 @@
 "use client";
-import { useState } from "react";
+
 import { motion, Variants } from "framer-motion";
 import { Navbar } from "@/components/sanctuary/Navbar";
 import { Footer } from "@/components/sanctuary/Footer";
 import { TreatmentCard } from "@/components/sanctuary/TreatmentCard";
-import { BookingWizard } from "@/components/booking/BookingWizard";
+import { useRouter } from "next/navigation";
 import { TREATMENTS, ADD_ONS } from "@/lib/mock-data";
 
 const CATEGORIES = ["SIGNATURE MASSAGE", "REFLEXOLOGY", "SIGNATURE TREATMENT", "SIGNATURE SPA PACKAGE"];
 
 export default function TreatmentsPage() {
-  const [isWizardOpen, setWizardOpen] = useState(false);
-  const [selectedTreatment, setSelectedTreatment] = useState<string | null>(null);
+  const router = useRouter();
 
-  const handleBook = (treatmentId: string) => {
-    setSelectedTreatment(treatmentId);
-    setWizardOpen(true);
+  const handleBook = () => {
+    router.push('/reserve');
   };
 
   const containerVariants: Variants = {
@@ -138,16 +136,6 @@ export default function TreatmentsPage() {
 
       <Footer />
 
-      {isWizardOpen && (
-        <BookingWizard
-          isOpen={isWizardOpen}
-          onClose={() => {
-            setWizardOpen(false);
-            setSelectedTreatment(null);
-          }}
-          initialTreatmentId={selectedTreatment}
-        />
-      )}
     </main>
   );
 }

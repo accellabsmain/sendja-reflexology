@@ -37,7 +37,7 @@ export function Navbar() {
             Outlets
           </Link>
         </div>
-        <Link href="/treatments">
+        <Link href="/reserve">
           <Button className="bg-primary text-on-primary hover:bg-[#E27A53] rounded-sm font-semibold px-6">
             Reserve
           </Button>

@@ -91,6 +91,7 @@ export function TreatmentHighlights() {
                   src={item.image}
                   alt={item.title}
                   fill
+                  priority={idx < 2}
                   sizes="(max-width: 768px) 100vw, 33vw"
                   className="object-cover transition-transform duration-700 group-hover:scale-105"
                 />

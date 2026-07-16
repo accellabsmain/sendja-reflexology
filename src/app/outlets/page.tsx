@@ -61,7 +61,8 @@ export default function OutletsPage() {
               src="/spa-exterior.png"
               alt="Sendja Wellness Sanctuary exterior at twilight"
               fill
-              sizes="100vw"
+              priority
+              sizes="(max-width: 1200px) 100vw, 1152px"
               className="object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-canvas via-canvas/40 to-transparent" />
