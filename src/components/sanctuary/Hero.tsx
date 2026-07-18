@@ -25,14 +25,14 @@ export function Hero() {
     <section className="relative min-h-screen flex items-end pb-24 md:pb-32">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
-        <motion.div 
+        <motion.div
           initial={{ scale: 1.05 }}
           animate={{ scale: 1 }}
           transition={{ duration: 1.5, ease: "easeOut" }}
           className="relative w-full h-full"
         >
           <Image
-            src="/hero-cover.jpg"
+            src="/hero.webp"
             alt="Sendja Reflexology & Wellness"
             fill
             sizes="100vw"
@@ -47,7 +47,7 @@ export function Hero() {
 
       {/* Content */}
       <div className="relative z-10 max-w-6xl mx-auto px-6 w-full">
-        <motion.div 
+        <motion.div
           variants={containerVariants}
           initial="hidden"
           animate="visible"
@@ -59,13 +59,13 @@ export function Hero() {
               Family Reflexology & Wellness Spa
             </span>
           </motion.div>
-          
+
           <motion.h1 variants={itemVariants} className="text-5xl md:text-7xl font-serif text-text-main leading-[1.1] tracking-tight">
-            Sendja, suatu kala<br/>yang menenangkan.
+            Sendja, suatu kala<br />yang menenangkan.
           </motion.h1>
 
           <motion.p variants={itemVariants} className="text-lg md:text-xl text-text-mid max-w-lg leading-relaxed font-light">
-            Sebuah pertanda bahwa tibalah masa bagi kita untuk berhenti sejenak, 
+            Sebuah pertanda bahwa tibalah masa bagi kita untuk berhenti sejenak,
             melepas letih dari karya upaya sepanjang hari.
           </motion.p>
 
